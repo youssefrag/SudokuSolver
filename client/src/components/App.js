@@ -12,10 +12,10 @@ const useStyles = makeStyles({
 
 function App() {
 
-  const emptyBoard = []
+  let emptyBoard = []
 
   for (let i = 1; i <= 81; i++) {
-    emptyBoard.push('')
+    emptyBoard.push(0)
   }
 
   const [board, setBoard] = useState(emptyBoard)
