@@ -1,5 +1,7 @@
 import { useState } from "react";
 import Board from "./ui/Board";
+
+import { Button } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 
 const useStyles = makeStyles({
@@ -22,12 +24,29 @@ function App() {
 
   const classes= useStyles();
 
+  const handleSubmit = () => {
+    let boardString = ''
+    for (let i = 0; i < 81; i++) {
+      if (board[i]) {
+        boardString += board[i].toString()
+      } else {
+        boardString += '.'
+      }
+    }
+    console.log(boardString)
+  }
+
   return (
     <div className={classes.root}>
       <Board 
         board={board}
         setBoard={setBoard}
       />
+      <Button
+        onClick={handleSubmit}
+      >
+        log board
+      </Button>
     </div>
   );
 }

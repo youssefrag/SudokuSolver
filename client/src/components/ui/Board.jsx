@@ -19,19 +19,14 @@ const useStyles = makeStyles({
 export default function Board(props) {
 
   const { board, setBoard } = props
-  
-  // console.log(typeof board)
-  // console.log(board.length)
   const classes = useStyles()
 
   const handleChange = (e) => {
     const name = e.target.name
     const value = e.target.value
-    console.log('value:', value)
     const index = Number(name) - 1
     board[index] = Number(value)
     setBoard(board)
-    console.log(board)
   }
 
   const createRowIndexes = (num) => {
