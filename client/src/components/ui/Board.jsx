@@ -3,7 +3,7 @@ import React from 'react'
 import {Button, TextField, Box } from '@mui/material';
 import { makeStyles } from "@mui/styles";
 
-import './Boards.css'
+import './Board.css'
 
 const useStyles = makeStyles({
   root: {
@@ -11,6 +11,9 @@ const useStyles = makeStyles({
     flexDirection: 'column',
     paddingLeft: '50px'
   },
+  field: {
+    backgroundColor: 'white'
+  }
 });
 
 export default function Board() {
@@ -20,17 +23,26 @@ export default function Board() {
   const createRowIndexes = (num) => {
     let indexes = []
     for (let c = 1; c <= 9; c++) {
-      indexes.push('f' + (((num - 1) * 9) + c))
+      let index = (((num - 1) * 9) + c)
+      indexes.push(index)
     }
     return indexes
   }
 
-  console.log(createRowIndexes(1))
+  const renderRow1 = createRowIndexes(1).map((index) => {
 
-  const renderRow1 = createRowIndexes(1).map((fieldId) => {
+    const fieldName = 'f' + index.toString()
+    let border = 'top '
+    if (index %  3 === 0) {
+      border += 'right '
+    }
+    if (index % 9 === 1) {
+      border += 'left'
+    }
+
     return(
       <TextField
-        className={fieldId}
+        className={`field ${fieldName} ${border}`}
         type="number"
         InputProps={{
           inputProps: { min: 1, max: 9 }
@@ -39,10 +51,19 @@ export default function Board() {
     )
   })
 
-  const renderRow2 = createRowIndexes(2).map((fieldId) => {
+  const renderRow2 = createRowIndexes(2).map((index) => {
+
+    const fieldName = 'f' + index.toString()
+    let border = ''
+    if (index %  3 === 0) {
+      border += 'right '
+    }
+    if (index % 9 === 1) {
+      border += 'left'
+    }
     return(
       <TextField
-        className={fieldId}
+        className={`field ${fieldName} ${border}`}
         type="number"
         InputProps={{
           inputProps: { min: 1, max: 9 }
@@ -51,10 +72,18 @@ export default function Board() {
     )
   })
 
-  const renderRow3 = createRowIndexes(3).map((fieldId) => {
+  const renderRow3 = createRowIndexes(3).map((index) => {
+    const fieldName = 'f' + index.toString()
+    let border = 'bottom '
+    if (index %  3 === 0) {
+      border += 'right '
+    }
+    if (index % 9 === 1) {
+      border += 'left'
+    }
     return(
       <TextField
-        className={fieldId}
+        className={`field ${fieldName} ${border}`}
         type="number"
         InputProps={{
           inputProps: { min: 1, max: 9 }
@@ -63,10 +92,18 @@ export default function Board() {
     )
   })
 
-  const renderRow4 = createRowIndexes(4).map((fieldId) => {
+  const renderRow4 = createRowIndexes(4).map((index) => {
+    const fieldName = 'f' + index.toString()
+    let border = ''
+    if (index %  3 === 0) {
+      border += 'right '
+    }
+    if (index % 9 === 1) {
+      border += 'left'
+    }
     return(
       <TextField
-        className={fieldId}
+        className={`field ${fieldName} ${border}`}
         type="number"
         InputProps={{
           inputProps: { min: 1, max: 9 }
@@ -75,10 +112,18 @@ export default function Board() {
     )
   })
 
-  const renderRow5 = createRowIndexes(5).map((fieldId) => {
+  const renderRow5 = createRowIndexes(5).map((index) => {
+    const fieldName = 'f' + index.toString()
+    let border = ''
+    if (index %  3 === 0) {
+      border += 'right '
+    }
+    if (index % 9 === 1) {
+      border += 'left'
+    }
     return(
       <TextField
-        className={fieldId}
+        className={`field ${fieldName} ${border}`}
         type="number"
         InputProps={{
           inputProps: { min: 1, max: 9 }
@@ -87,10 +132,18 @@ export default function Board() {
     )
   })
 
-  const renderRow6 = createRowIndexes(6).map((fieldId) => {
+  const renderRow6 = createRowIndexes(6).map((index) => {
+    const fieldName = 'f' + index.toString()
+    let border = 'bottom '
+    if (index %  3 === 0) {
+      border += 'right '
+    }
+    if (index % 9 === 1) {
+      border += 'left'
+    }
     return(
       <TextField
-        className={fieldId}
+        className={`field ${fieldName} ${border}`}
         type="number"
         InputProps={{
           inputProps: { min: 1, max: 9 }
@@ -99,10 +152,18 @@ export default function Board() {
     )
   })
 
-  const renderRow7 = createRowIndexes(7).map((fieldId) => {
+  const renderRow7 = createRowIndexes(7).map((index) => {
+    const fieldName = 'f' + index.toString()
+    let border = ''
+    if (index %  3 === 0) {
+      border += 'right '
+    }
+    if (index % 9 === 1) {
+      border += 'left'
+    }
     return(
       <TextField
-        className={fieldId}
+        className={`field ${fieldName} ${border}`}
         type="number"
         InputProps={{
           inputProps: { min: 1, max: 9 }
@@ -111,10 +172,18 @@ export default function Board() {
     )
   })
 
-  const renderRow8 = createRowIndexes(8).map((fieldId) => {
+  const renderRow8 = createRowIndexes(8).map((index) => {
+    const fieldName = 'f' + index.toString()
+    let border = ''
+    if (index %  3 === 0) {
+      border += 'right '
+    }
+    if (index % 9 === 1) {
+      border += 'left'
+    }
     return(
       <TextField
-        className={fieldId}
+        className={`field ${fieldName} ${border}`}
         type="number"
         InputProps={{
           inputProps: { min: 1, max: 9 }
@@ -123,10 +192,18 @@ export default function Board() {
     )
   })
 
-  const renderRow9 = createRowIndexes(9).map((fieldId) => {
+  const renderRow9 = createRowIndexes(9).map((index) => {
+    const fieldName = 'f' + index.toString()
+    let border = 'bottom '
+    if (index %  3 === 0) {
+      border += 'right '
+    }
+    if (index % 9 === 1) {
+      border += 'left'
+    }
     return(
       <TextField
-        className={fieldId}
+        className={`field ${fieldName} ${border}`}
         type="number"
         InputProps={{
           inputProps: { min: 1, max: 9 }
