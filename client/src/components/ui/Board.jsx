@@ -9,7 +9,6 @@ const useStyles = makeStyles({
   root: {
     display: 'flex',
     flexDirection: 'column',
-    paddingLeft: '50px'
   },
   field: {
     backgroundColor: 'white'

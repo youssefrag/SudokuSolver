@@ -9,6 +9,9 @@ const useStyles = makeStyles({
     paddingTop: '100px',
     paddingBottom: '500px',
     backgroundColor: '#D3D3D3',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center'
   },
 });
 
@@ -44,8 +47,13 @@ function App() {
       />
       <Button
         onClick={handleSubmit}
+        variant="contained"
+        sx={{
+          width: '15%',
+          marginTop: '30px'
+        }}
       >
-        log board
+        Solve
       </Button>
     </div>
   );
