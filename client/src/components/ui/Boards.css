@@ -1,168 +1,205 @@
 .f1 {
   border-left: 2px solid;
   border-top: 2px solid;
+  background-color: white;
 }
 
 .f2 {
   border-top: 2px solid;
+  background-color: white;
 }
 
 .f3 {
+  border-right: 2px solid;
   border-top: 2px solid;
+  background-color: white;
 }
 
 .f4 {
   border-top: 2px solid;
+  background-color: white;
 }
 
 .f5 {
   border-top: 2px solid;
+  background-color: white;
 }
 
 .f6 {
   border-top: 2px solid;
+  background-color: white;
 }
 
 .f7 {
   border-top: 2px solid;
+  background-color: white;
 }
 
 .f8 {
   border-top: 2px solid;
+  background-color: white;
 }
 
 .f9 {
   border-top: 2px solid;
   border-right: 2px solid;
+  background-color: white;
 }
 
 .f10 {
   border-left: 2px solid;
+  background-color: white;
 }
 
 .f19 {
   border-left: 2px solid;
+  background-color: white;
 }
 
 .f28 {
   border-left: 2px solid;
+  background-color: white;
 }
 
 .f37 {
   border-left: 2px solid;
+  background-color: white;
 }
 
 .f46 {
   border-left: 2px solid;
+  background-color: white;
 }
 
 .f55 {
   border-left: 2px solid;
+  background-color: white;
 }
 
 .f64 {
   border-left: 2px solid;
+  background-color: white;
 }
 
 .f73 {
   border-left: 2px solid;
+  border-bottom: 2px solid;
+  background-color: white;
 }
 
 .f18 {
   border-right: 2px solid;
+  background-color: white;
 }
 
 .f27 {
   border-right: 2px solid;
+  background-color: white;
 }
 
 .f36 {
   border-right: 2px solid;
+  background-color: white;
 }
 
 .f45 {
   border-right: 2px solid;
+  background-color: white;
 }
 
 .f54 {
   border-right: 2px solid;
+  background-color: white;
 }
 
 .f63 {
   border-right: 2px solid;
+  border-right: 2px solid;
+  background-color: white;
+
 }
 
 .f72 {
   border-right: 2px solid;
+  border-right: 2px solid;
+  background-color: white;
+
 }
 
 .f81 {
   border-right: 2px solid;
   border-bottom: 2px solid;
+  background-color: white;
 }
 
 .f80 {
   border-bottom: 2px solid;
+  background-color: white;
 }
 
 .f79 {
   border-bottom: 2px solid;
+  background-color: white;
 }
 
 .f78 {
   border-bottom: 2px solid;
+  background-color: white;
 }
 
 .f77 {
   border-bottom: 2px solid;
+  background-color: white;
 }
 
 .f76 {
   border-bottom: 2px solid;
+  background-color: white;
 }
 
 .f75 {
   border-bottom: 2px solid;
+  background-color: white;
 }
 
 .f74 {
   border-bottom: 2px solid;
-}
-
-.f73 {
-  border-bottom: 2px solid;
-}
-
-.f3 {
-  border-right: 2px solid;
+  background-color: white;
 }
 
 .f12 {
   border-right: 2px solid;
+  background-color: white;
 }
 
 .f21 {
   border-right: 2px solid;
+  background-color: white;
 }
 
 .f30 {
   border-right: 2px solid;
+  background-color: white;
 }
 
 .f39 {
   border-right: 2px solid;
+  background-color: white;
 }
 
 .f48 {
   border-right: 2px solid;
+  background-color: white;
 }
 
 .f57 {
   border-right: 2px solid;
+  background-color: white;
 }
 
 .f66 {
   border-right: 2px solid;
+  background-color: white;
 }
 
 .f75 {
@@ -275,4 +312,172 @@
 
 .f54 {
   border-bottom: 2px solid;
+}
+
+.f11 {
+  background-color: white;
+}
+
+.f20 {
+  background-color: white;
+}
+
+.f29 {
+  background-color: white;
+}
+
+.f38 {
+  background-color: white;
+}
+
+.f47 {
+  background-color: white;
+}
+
+.f56 {
+  background-color: white;
+}
+
+.f65 {
+  background-color: white;
+}
+
+.f13 {
+  background-color: white;
+}
+
+.f22 {
+  background-color: white;
+}
+
+.f31 {
+  background-color: white;
+}
+
+.f40 {
+  background-color: white;
+}
+
+.f49 {
+  background-color: white;
+}
+
+.f58 {
+  background-color: white;
+}
+
+.f67 {
+  background-color: white;
+}
+
+.f16 {
+  background-color: white;
+}
+
+.f25 {
+  background-color: white;
+}
+
+.f34 {
+  background-color: white;
+}
+
+.f43 {
+  background-color: white;
+}
+
+.f52 {
+  background-color: white;
+}
+
+.f61 {
+  background-color: white;
+}
+
+.f70 {
+  background-color: white;
+}
+
+.f17 {
+  background-color: white;
+}
+
+.f26 {
+  background-color: white;
+}
+
+.f35 {
+  background-color: white;
+}
+
+.f44 {
+  background-color: white;
+}
+
+.f53 {
+  background-color: white;
+}
+
+.f62 {
+  background-color: white;
+}
+
+.f71 {
+  background-color: white;
+}
+
+.f14 {
+  background-color: white;
+}
+
+.f15 {
+  background-color: white;
+}
+
+.f23 {
+  background-color: white;
+}
+
+.f24 {
+  background-color: white;
+}
+
+.f32 {
+  background-color: white;
+}
+
+.f33 {
+  background-color: white;
+}
+
+.f42 {
+  background-color: white;
+}
+
+.f41 {
+  background-color: white;
+}
+
+.f50 {
+  background-color: white;
+}
+
+.f51 {
+  background-color: white;
+}
+
+.f60 {
+  background-color: white;
+}
+
+.f59 {
+  background-color: white;
+}
+
+.f68 {
+  background-color: white;
+}
+
+.f69 {
+  background-color: white;
 }

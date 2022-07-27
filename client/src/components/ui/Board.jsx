@@ -11,9 +11,6 @@ const useStyles = makeStyles({
     flexDirection: 'column',
     paddingLeft: '50px'
   },
-  f1: {
-    border: '10px solid'
-  }
 });
 
 export default function Board() {
