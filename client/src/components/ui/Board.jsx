@@ -1,12 +1,19 @@
 import React from 'react'
+
 import {Button, TextField, Box } from '@mui/material';
 import { makeStyles } from "@mui/styles";
+
+import './Boards.css'
 
 const useStyles = makeStyles({
   root: {
     display: 'flex',
-    flexDirection: 'column'
+    flexDirection: 'column',
+    paddingLeft: '50px'
   },
+  f1: {
+    border: '10px solid'
+  }
 });
 
 export default function Board() {
@@ -16,15 +23,17 @@ export default function Board() {
   const createRowIndexes = (num) => {
     let indexes = []
     for (let c = 1; c <= 9; c++) {
-      indexes.push(((num - 1) * 9) + c)
+      indexes.push('f' + (((num - 1) * 9) + c))
     }
     return indexes
   }
 
+  console.log(createRowIndexes(1))
+
   const renderRow1 = createRowIndexes(1).map((fieldId) => {
     return(
       <TextField
-        id={fieldId}
+        className={fieldId}
         type="number"
         InputProps={{
           inputProps: { min: 1, max: 9 }
@@ -32,10 +41,11 @@ export default function Board() {
       />
     )
   })
+
   const renderRow2 = createRowIndexes(2).map((fieldId) => {
     return(
       <TextField
-        id={fieldId}
+        className={fieldId}
         type="number"
         InputProps={{
           inputProps: { min: 1, max: 9 }
@@ -47,7 +57,7 @@ export default function Board() {
   const renderRow3 = createRowIndexes(3).map((fieldId) => {
     return(
       <TextField
-        id={fieldId}
+        className={fieldId}
         type="number"
         InputProps={{
           inputProps: { min: 1, max: 9 }
@@ -59,7 +69,7 @@ export default function Board() {
   const renderRow4 = createRowIndexes(4).map((fieldId) => {
     return(
       <TextField
-        id={fieldId}
+        className={fieldId}
         type="number"
         InputProps={{
           inputProps: { min: 1, max: 9 }
@@ -71,7 +81,7 @@ export default function Board() {
   const renderRow5 = createRowIndexes(5).map((fieldId) => {
     return(
       <TextField
-        id={fieldId}
+        className={fieldId}
         type="number"
         InputProps={{
           inputProps: { min: 1, max: 9 }
@@ -83,7 +93,7 @@ export default function Board() {
   const renderRow6 = createRowIndexes(6).map((fieldId) => {
     return(
       <TextField
-        id={fieldId}
+        className={fieldId}
         type="number"
         InputProps={{
           inputProps: { min: 1, max: 9 }
@@ -95,7 +105,7 @@ export default function Board() {
   const renderRow7 = createRowIndexes(7).map((fieldId) => {
     return(
       <TextField
-        id={fieldId}
+        className={fieldId}
         type="number"
         InputProps={{
           inputProps: { min: 1, max: 9 }
@@ -107,7 +117,7 @@ export default function Board() {
   const renderRow8 = createRowIndexes(8).map((fieldId) => {
     return(
       <TextField
-        id={fieldId}
+        className={fieldId}
         type="number"
         InputProps={{
           inputProps: { min: 1, max: 9 }
@@ -119,7 +129,7 @@ export default function Board() {
   const renderRow9 = createRowIndexes(9).map((fieldId) => {
     return(
       <TextField
-        id={fieldId}
+        className={fieldId}
         type="number"
         InputProps={{
           inputProps: { min: 1, max: 9 }
