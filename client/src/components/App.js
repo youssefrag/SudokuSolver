@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Board from "./ui/Board";
 import { makeStyles } from "@mui/styles";
 
@@ -10,6 +11,14 @@ const useStyles = makeStyles({
 });
 
 function App() {
+
+  const emptyBoard = []
+
+  for (let i = 1; i <= 81; i++) {
+    emptyBoard.push(null)
+  }
+
+  const [board, setBoard] = useState(emptyBoard)
 
   const classes= useStyles();
 

@@ -31,7 +31,7 @@ export default function Board() {
 
   const renderRow1 = createRowIndexes(1).map((index) => {
 
-    const fieldName = 'f' + index.toString()
+    const fieldIndex = index.toString()
     let border = 'top '
     if (index %  3 === 0) {
       border += 'right '
@@ -42,7 +42,7 @@ export default function Board() {
 
     return(
       <TextField
-        className={`field ${fieldName} ${border}`}
+        className={`field ${fieldIndex} ${border}`}
         type="number"
         InputProps={{
           inputProps: { min: 1, max: 9 }
@@ -53,7 +53,7 @@ export default function Board() {
 
   const renderRow2 = createRowIndexes(2).map((index) => {
 
-    const fieldName = 'f' + index.toString()
+    const fieldIndex = index.toString()
     let border = ''
     if (index %  3 === 0) {
       border += 'right '
@@ -63,7 +63,7 @@ export default function Board() {
     }
     return(
       <TextField
-        className={`field ${fieldName} ${border}`}
+        className={`field ${fieldIndex} ${border}`}
         type="number"
         InputProps={{
           inputProps: { min: 1, max: 9 }
@@ -73,7 +73,7 @@ export default function Board() {
   })
 
   const renderRow3 = createRowIndexes(3).map((index) => {
-    const fieldName = 'f' + index.toString()
+    const fieldIndex = index.toString()
     let border = 'bottom '
     if (index %  3 === 0) {
       border += 'right '
@@ -83,7 +83,7 @@ export default function Board() {
     }
     return(
       <TextField
-        className={`field ${fieldName} ${border}`}
+        className={`field ${fieldIndex} ${border}`}
         type="number"
         InputProps={{
           inputProps: { min: 1, max: 9 }
@@ -93,7 +93,7 @@ export default function Board() {
   })
 
   const renderRow4 = createRowIndexes(4).map((index) => {
-    const fieldName = 'f' + index.toString()
+    const fieldIndex = index.toString()
     let border = ''
     if (index %  3 === 0) {
       border += 'right '
@@ -103,7 +103,7 @@ export default function Board() {
     }
     return(
       <TextField
-        className={`field ${fieldName} ${border}`}
+        className={`field ${fieldIndex} ${border}`}
         type="number"
         InputProps={{
           inputProps: { min: 1, max: 9 }
@@ -113,7 +113,7 @@ export default function Board() {
   })
 
   const renderRow5 = createRowIndexes(5).map((index) => {
-    const fieldName = 'f' + index.toString()
+    const fieldIndex = index.toString()
     let border = ''
     if (index %  3 === 0) {
       border += 'right '
@@ -123,7 +123,7 @@ export default function Board() {
     }
     return(
       <TextField
-        className={`field ${fieldName} ${border}`}
+        className={`field ${fieldIndex} ${border}`}
         type="number"
         InputProps={{
           inputProps: { min: 1, max: 9 }
@@ -133,7 +133,7 @@ export default function Board() {
   })
 
   const renderRow6 = createRowIndexes(6).map((index) => {
-    const fieldName = 'f' + index.toString()
+    const fieldIndex = index.toString()
     let border = 'bottom '
     if (index %  3 === 0) {
       border += 'right '
@@ -143,7 +143,7 @@ export default function Board() {
     }
     return(
       <TextField
-        className={`field ${fieldName} ${border}`}
+        className={`field ${fieldIndex} ${border}`}
         type="number"
         InputProps={{
           inputProps: { min: 1, max: 9 }
@@ -153,7 +153,7 @@ export default function Board() {
   })
 
   const renderRow7 = createRowIndexes(7).map((index) => {
-    const fieldName = 'f' + index.toString()
+    const fieldIndex = index.toString()
     let border = ''
     if (index %  3 === 0) {
       border += 'right '
@@ -163,7 +163,7 @@ export default function Board() {
     }
     return(
       <TextField
-        className={`field ${fieldName} ${border}`}
+        className={`field ${fieldIndex} ${border}`}
         type="number"
         InputProps={{
           inputProps: { min: 1, max: 9 }
@@ -173,7 +173,7 @@ export default function Board() {
   })
 
   const renderRow8 = createRowIndexes(8).map((index) => {
-    const fieldName = 'f' + index.toString()
+    const fieldIndex = index.toString()
     let border = ''
     if (index %  3 === 0) {
       border += 'right '
@@ -183,7 +183,7 @@ export default function Board() {
     }
     return(
       <TextField
-        className={`field ${fieldName} ${border}`}
+        className={`field ${fieldIndex} ${border}`}
         type="number"
         InputProps={{
           inputProps: { min: 1, max: 9 }
@@ -193,7 +193,7 @@ export default function Board() {
   })
 
   const renderRow9 = createRowIndexes(9).map((index) => {
-    const fieldName = 'f' + index.toString()
+    const fieldIndex = index.toString()
     let border = 'bottom '
     if (index %  3 === 0) {
       border += 'right '
@@ -203,7 +203,7 @@ export default function Board() {
     }
     return(
       <TextField
-        className={`field ${fieldName} ${border}`}
+        className={`field ${fieldIndex} ${border}`}
         type="number"
         InputProps={{
           inputProps: { min: 1, max: 9 }
