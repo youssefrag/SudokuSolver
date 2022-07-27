@@ -15,7 +15,7 @@ function App() {
   const emptyBoard = []
 
   for (let i = 1; i <= 81; i++) {
-    emptyBoard.push(null)
+    emptyBoard.push('')
   }
 
   const [board, setBoard] = useState(emptyBoard)
@@ -24,7 +24,10 @@ function App() {
 
   return (
     <div className={classes.root}>
-      <Board />
+      <Board 
+        board={board}
+        setBoard={setBoard}
+      />
     </div>
   );
 }

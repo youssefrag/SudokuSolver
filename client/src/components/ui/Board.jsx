@@ -16,9 +16,18 @@ const useStyles = makeStyles({
   }
 });
 
-export default function Board() {
+export default function Board(props) {
+
+  const { board, setBoard } = props
 
   const classes = useStyles()
+
+  const handleChange = (e) => {
+    const name = e.target.name
+    const value = e.target.value
+    console.log(value)
+    // setUser(prev => ({...user, [name]: value}))
+  }
 
   const createRowIndexes = (num) => {
     let indexes = []
@@ -42,6 +51,9 @@ export default function Board() {
 
     return(
       <TextField
+        value={board[fieldIndex - 1]}
+        onChange={handleChange}
+        name={fieldIndex}
         className={`field ${fieldIndex} ${border}`}
         type="number"
         InputProps={{
