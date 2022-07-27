@@ -1,3 +1,4 @@
+import Board from "./ui/Board";
 import { makeStyles } from "@mui/styles";
 
 const useStyles = makeStyles({
@@ -14,6 +15,7 @@ function App() {
 
   return (
     <div className={classes.root}>
+      <Board />
     </div>
   );
 }
