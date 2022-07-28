@@ -20,8 +20,6 @@ const useStyles = makeStyles({
 
 function App() {
 
-  console.log(process.env.REACT_APP_RAPID_API_KEY)
-
   let emptyBoard = []
 
   for (let i = 1; i <= 81; i++) {
@@ -45,7 +43,9 @@ function App() {
         boardString += '.'
       }
     }
-    axios.post(`http://localhost:6060/solve`, boardString, {
+    console.log(boardString)
+    const boardsObject = {0: boardString}
+    axios.post(`http://localhost:6060/solve`, boardsObject, {
       withCredentials: true,
     })
   }
