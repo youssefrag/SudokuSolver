@@ -46,6 +46,23 @@ function App() {
     }
   }
 
+  const stringToArray = (string) => {
+    const array = []
+    for (let i = 0; i < string.length; i++) {
+      array.push(Number(string[i]))
+    }
+    return array
+  }
+
+  const populateBoard = (board) => {
+    for (let i = 0; i < board.length; i++) {
+      const textFieldId = (i + 1).toString()
+      // console.log('field id:', textFieldId)
+      // console.log('value to be populated:', board[i])
+      document.getElementsByClassName(textFieldId)[0].value = board[i]
+    }
+  }
+
   const handleSubmit = () => {
     let boardString = ''
     for (let i = 0; i < 81; i++) {
@@ -60,8 +77,8 @@ function App() {
       }
     }
     const boardObject = {}
+    // console.log(boardString)
     boardObject["puzzle"] = boardString
-    // const JsonBoardObject = JSON.stringify(boardObject)
     axios.post(`http://localhost:6060/solve`, boardObject, {
       withCredentials: true,
     })
@@ -80,12 +97,16 @@ function App() {
         if (!document.getElementById("message")) {
           messageContainer.prepend(message)
         }
+      } else if (result.data.solvable === true) {
+        const solutionString = result.data.solution
+        const solutionArray = stringToArray(solutionString)
+        console.log(solutionArray)
+        populateBoard(solutionArray)
       }
     }).catch((err) => {
       console.log(err.message)
     })
   }
-  
 
   return (
     <div className={classes.root}>

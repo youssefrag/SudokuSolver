@@ -3,8 +3,6 @@ import React from 'react'
 import {Button, TextField, Box } from '@mui/material';
 import { makeStyles } from "@mui/styles";
 
-import axios from 'axios'
-
 import './Board.css'
 
 const useStyles = makeStyles({
@@ -27,6 +25,7 @@ export default function Board(props) {
     const value = e.target.value
     const index = Number(name) - 1
     board[index] = Number(value)
+    // console.log(board)
     setBoard(board)
     removeMessage()
   }
