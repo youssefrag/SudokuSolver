@@ -43,9 +43,11 @@ function App() {
         boardString += '.'
       }
     }
-    console.log(boardString)
-    const boardsObject = {0: boardString}
-    axios.post(`http://localhost:6060/solve`, boardsObject, {
+    const boardObject = {}
+    boardObject["puzzle"] = boardString
+    // const JsonBoardObject = JSON.stringify(boardObject)
+    console.log(boardObject.puzzle)
+    axios.post(`http://localhost:6060/solve`, boardObject, {
       withCredentials: true,
     })
   }
