@@ -19,7 +19,7 @@ const useStyles = makeStyles({
 
 export default function Board(props) {
 
-  const { board, setBoard } = props
+  const { board, setBoard, removeMessage } = props
   const classes = useStyles()
 
   const handleChange = (e) => {
@@ -28,6 +28,7 @@ export default function Board(props) {
     const index = Number(name) - 1
     board[index] = Number(value)
     setBoard(board)
+    removeMessage()
   }
 
   const createRowIndexes = (num) => {

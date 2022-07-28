@@ -30,6 +30,11 @@ function App() {
 
   const classes= useStyles();
 
+  const removeMEssage = () => {
+    const element = document.getElementById("message");
+    element.remove()
+  }
+
   const handleSubmit = () => {
     let boardString = ''
     for (let i = 0; i < 81; i++) {
@@ -46,17 +51,38 @@ function App() {
     const boardObject = {}
     boardObject["puzzle"] = boardString
     // const JsonBoardObject = JSON.stringify(boardObject)
-    console.log(boardObject.puzzle)
     axios.post(`http://localhost:6060/solve`, boardObject, {
       withCredentials: true,
     })
+    .then((result) => {
+      console.log(result.data)
+      if (result.data.solvable === false) {
+        const messageContainer = document.querySelector('#message-container')
+
+        const message = document.createElement("h1")
+
+        message.setAttribute("id", "message")
+
+        message.textContent = "Board is not solvable!"
+
+        if (!document.getElementById("message")) {
+          messageContainer.prepend(message)
+        }
+      }
+    }).catch((err) => {
+      console.log(err.message)
+    })
   }
+  
 
   return (
     <div className={classes.root}>
+      <div id="message-container">
+      </div>
       <Board 
         board={board}
         setBoard={setBoard}
+        removeMessage={removeMEssage}
       />
       <Button
         onClick={handleSubmit}
