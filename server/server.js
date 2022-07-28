@@ -9,6 +9,10 @@ App.use(Cors({
   credentials: true,
 }))
 
+App.post('/solve', async (req, res) => {
+  console.log('route was hit')
+})
+
 App.listen(PORT, () => {
   console.log(`Express is listening on port ${PORT}`);
 });

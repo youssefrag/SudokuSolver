@@ -1,4 +1,7 @@
 import { useState } from "react";
+
+import axios from "axios";
+
 import Board from "./ui/Board";
 
 import { Button } from "@mui/material";
@@ -16,6 +19,8 @@ const useStyles = makeStyles({
 });
 
 function App() {
+
+  console.log(process.env.REACT_APP_RAPID_API_KEY)
 
   let emptyBoard = []
 
@@ -40,7 +45,9 @@ function App() {
         boardString += '.'
       }
     }
-    console.log(boardString)
+    axios.post(`http://localhost:6060/solve`, boardString, {
+      withCredentials: true,
+    })
   }
 
   return (
