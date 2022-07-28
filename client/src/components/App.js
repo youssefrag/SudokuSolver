@@ -30,6 +30,10 @@ function App() {
   const handleSubmit = () => {
     let boardString = ''
     for (let i = 0; i < 81; i++) {
+      if (Number(board[i]) > 9) {
+        alert('Number can\'t exceed 9!')
+        return
+      }
       if (board[i]) {
         boardString += board[i].toString()
       } else {
