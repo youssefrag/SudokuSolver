@@ -59,7 +59,7 @@ function App() {
       const textFieldId = (i + 1).toString()
       // console.log('field id:', textFieldId)
       // console.log('value to be populated:', board[i])
-      document.getElementsByClassName(textFieldId)[0].value = board[i]
+      document.getElementById(textFieldId).innerHTML = board[i]
     }
   }
 

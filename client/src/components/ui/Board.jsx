@@ -52,6 +52,7 @@ export default function Board(props) {
 
     return(
       <TextField
+        id={fieldIndex}
         onChange={handleChange}
         name={fieldIndex}
         className={`field ${fieldIndex} ${border}`}
@@ -75,6 +76,7 @@ export default function Board(props) {
     }
     return(
       <TextField
+        id={fieldIndex}
         onChange={handleChange}
         name={fieldIndex}
         className={`field ${fieldIndex} ${border}`}
@@ -97,6 +99,7 @@ export default function Board(props) {
     }
     return(
       <TextField
+        id={fieldIndex}
         onChange={handleChange}
         name={fieldIndex}
         className={`field ${fieldIndex} ${border}`}
@@ -119,6 +122,7 @@ export default function Board(props) {
     }
     return(
       <TextField
+        id={fieldIndex}
         onChange={handleChange}
         name={fieldIndex}
         className={`field ${fieldIndex} ${border}`}
@@ -141,6 +145,7 @@ export default function Board(props) {
     }
     return(
       <TextField
+        id={fieldIndex}
         onChange={handleChange}
         name={fieldIndex}
         className={`field ${fieldIndex} ${border}`}
@@ -163,6 +168,7 @@ export default function Board(props) {
     }
     return(
       <TextField
+        id={fieldIndex}
         onChange={handleChange}
         name={fieldIndex}
         className={`field ${fieldIndex} ${border}`}
@@ -185,6 +191,7 @@ export default function Board(props) {
     }
     return(
       <TextField
+        id={fieldIndex}
         onChange={handleChange}
         name={fieldIndex}
         className={`field ${fieldIndex} ${border}`}
@@ -207,6 +214,7 @@ export default function Board(props) {
     }
     return(
       <TextField
+        id={fieldIndex}
         onChange={handleChange}
         name={fieldIndex}
         className={`field ${fieldIndex} ${border}`}
@@ -229,6 +237,7 @@ export default function Board(props) {
     }
     return(
       <TextField
+        id={fieldIndex}
         onChange={handleChange}
         name={fieldIndex}
         className={`field ${fieldIndex} ${border}`}
