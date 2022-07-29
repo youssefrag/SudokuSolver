@@ -50,8 +50,11 @@ export default function Board(props) {
       border += 'left'
     }
 
+    let Fieldvalue = board[index -1]
+
     return(
       <TextField
+        value={Fieldvalue}
         id={fieldIndex}
         onChange={handleChange}
         name={fieldIndex}
@@ -74,8 +77,11 @@ export default function Board(props) {
     if (index % 9 === 1) {
       border += 'left'
     }
+    let Fieldvalue = board[index -1]
+
     return(
       <TextField
+        value={Fieldvalue}
         id={fieldIndex}
         onChange={handleChange}
         name={fieldIndex}
@@ -97,8 +103,11 @@ export default function Board(props) {
     if (index % 9 === 1) {
       border += 'left'
     }
+    let Fieldvalue = board[index -1]
+
     return(
       <TextField
+        value={Fieldvalue}
         id={fieldIndex}
         onChange={handleChange}
         name={fieldIndex}
@@ -120,8 +129,11 @@ export default function Board(props) {
     if (index % 9 === 1) {
       border += 'left'
     }
+    let Fieldvalue = board[index -1]
+
     return(
       <TextField
+        value={Fieldvalue}
         id={fieldIndex}
         onChange={handleChange}
         name={fieldIndex}
@@ -143,8 +155,11 @@ export default function Board(props) {
     if (index % 9 === 1) {
       border += 'left'
     }
+    let Fieldvalue = board[index -1]
+
     return(
       <TextField
+        value={Fieldvalue}
         id={fieldIndex}
         onChange={handleChange}
         name={fieldIndex}
@@ -166,8 +181,11 @@ export default function Board(props) {
     if (index % 9 === 1) {
       border += 'left'
     }
+    let Fieldvalue = board[index -1]
+
     return(
       <TextField
+        value={Fieldvalue}
         id={fieldIndex}
         onChange={handleChange}
         name={fieldIndex}
@@ -189,8 +207,11 @@ export default function Board(props) {
     if (index % 9 === 1) {
       border += 'left'
     }
+    let Fieldvalue = board[index -1]
+
     return(
       <TextField
+        value={Fieldvalue}
         id={fieldIndex}
         onChange={handleChange}
         name={fieldIndex}
@@ -212,8 +233,11 @@ export default function Board(props) {
     if (index % 9 === 1) {
       border += 'left'
     }
+    let Fieldvalue = board[index -1]
+
     return(
       <TextField
+        value={Fieldvalue}
         id={fieldIndex}
         onChange={handleChange}
         name={fieldIndex}
@@ -235,8 +259,11 @@ export default function Board(props) {
     if (index % 9 === 1) {
       border += 'left'
     }
+    let Fieldvalue = board[index -1]
+
     return(
       <TextField
+        value={Fieldvalue}
         id={fieldIndex}
         onChange={handleChange}
         name={fieldIndex}

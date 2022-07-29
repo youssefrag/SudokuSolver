@@ -32,7 +32,7 @@ function App() {
   let emptyBoard = []
 
   for (let i = 1; i <= 81; i++) {
-    emptyBoard.push(0)
+    emptyBoard.push(null)
   }
 
   const [board, setBoard] = useState(emptyBoard)
@@ -100,8 +100,9 @@ function App() {
       } else if (result.data.solvable === true) {
         const solutionString = result.data.solution
         const solutionArray = stringToArray(solutionString)
-        console.log(solutionArray)
-        populateBoard(solutionArray)
+        setBoard(solutionArray)
+        // console.log(solutionArray)
+        // populateBoard(solutionArray)
       }
     }).catch((err) => {
       console.log(err.message)
