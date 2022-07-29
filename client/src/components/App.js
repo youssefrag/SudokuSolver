@@ -38,13 +38,7 @@ function App() {
   }
 
   const [board, setBoard] = useState(emptyBoard)
-
-  const [refreshState, setRefreshState] = useState(0)
-
-  useEffect(() => {
-    setBoard(emptyBoard)
-  }, [refreshState])
-
+ 
   const classes= useStyles();
 
   const removeMEssage = () => {
@@ -107,6 +101,7 @@ function App() {
   
   const handleReset = () => {
     setBoard(emptyBoard)
+    removeMEssage()
     eraseBoard()
   }
   
