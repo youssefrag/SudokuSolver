@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import axios from "axios";
 
@@ -39,6 +39,12 @@ function App() {
 
   const [board, setBoard] = useState(emptyBoard)
 
+  const [refreshState, setRefreshState] = useState(0)
+
+  useEffect(() => {
+    setBoard(emptyBoard)
+  }, [refreshState])
+
   const classes= useStyles();
 
   const removeMEssage = () => {
@@ -63,6 +69,10 @@ function App() {
       // console.log('value to be populated:', board[i])
       document.getElementById(textFieldId).innerHTML = board[i]
     }
+  }
+
+  const resetBoard = () => {
+    setRefreshState(refreshState + 1)
   }
 
   const handleSubmit = () => {
@@ -132,6 +142,7 @@ function App() {
           Solve
         </Button>
         <Button
+          onClick={() => setRefreshState(refreshState + 1)}
           variant='contained'
           sx={{
             width: '90%',
