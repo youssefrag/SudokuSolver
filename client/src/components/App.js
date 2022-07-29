@@ -10,7 +10,7 @@ import { makeStyles } from "@mui/styles";
 const useStyles = makeStyles({
   root: {
     paddingTop: '100px',
-    paddingBottom: '500px',
+    paddingBottom: '100px',
     backgroundColor: '#D3D3D3',
     display: 'flex',
     flexDirection: 'column',
@@ -24,7 +24,9 @@ const useStyles = makeStyles({
     borderRadius: '15px',
     color: '#d32f2f'
   },
-
+  btns: {
+    matginTop: '20px'
+  }
 });
 
 function App() {
@@ -118,16 +120,27 @@ function App() {
         setBoard={setBoard}
         removeMessage={removeMEssage}
       />
-      <Button
-        onClick={handleSubmit}
-        variant="contained"
-        sx={{
-          width: '15%',
-          marginTop: '30px'
-        }}
-      >
-        Solve
-      </Button>
+      <div className={classes.btns}>
+        <Button
+          onClick={handleSubmit}
+          variant="contained"
+          sx={{
+            width: '90%',
+            marginTop: '30px'
+          }}
+        >
+          Solve
+        </Button>
+        <Button
+          variant='contained'
+          sx={{
+            width: '90%',
+            marginTop: '30px'
+          }}
+        >
+          Reset board
+        </Button>
+      </div>
     </div>
   );
 }
